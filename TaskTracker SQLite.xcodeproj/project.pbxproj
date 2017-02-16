@@ -8,20 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		F2649A791E55772300F98F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649A781E55772300F98F4C /* AppDelegate.swift */; };
-		F2649A7B1E55772300F98F4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649A7A1E55772300F98F4C /* ViewController.swift */; };
+		F2649A7B1E55772300F98F4C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649A7A1E55772300F98F4C /* ListVC.swift */; };
 		F2649A7E1E55772300F98F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2649A7C1E55772300F98F4C /* Main.storyboard */; };
 		F2649A801E55772300F98F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2649A7F1E55772300F98F4C /* Assets.xcassets */; };
 		F2649A831E55772300F98F4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2649A811E55772300F98F4C /* LaunchScreen.storyboard */; };
+		F2649A8C1E55779800F98F4C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2649A8B1E55779800F98F4C /* libsqlite3.tbd */; };
+		F2649A951E557D7000F98F4C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2649A941E557D7000F98F4C /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F2649A751E55772300F98F4C /* TaskTracker SQLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaskTracker SQLite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2649A781E55772300F98F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2649A7A1E55772300F98F4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2649A7A1E55772300F98F4C /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		F2649A7D1E55772300F98F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2649A7F1E55772300F98F4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2649A821E55772300F98F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2649A841E55772300F98F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2649A8B1E55779800F98F4C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F2649A8D1E5578A900F98F4C /* TaskTracker SQLite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskTracker SQLite-Bridging-Header.h"; sourceTree = "<group>"; };
+		F2649A941E557D7000F98F4C /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2649A8C1E55779800F98F4C /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				F2649A771E55772300F98F4C /* TaskTracker SQLite */,
 				F2649A761E55772300F98F4C /* Products */,
+				F2649A8A1E55779800F98F4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +61,48 @@
 		F2649A771E55772300F98F4C /* TaskTracker SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				F2649A931E5578F000F98F4C /* Controller */,
+				F2649A921E5578EC00F98F4C /* View */,
+				F2649A911E5578DE00F98F4C /* Model */,
 				F2649A781E55772300F98F4C /* AppDelegate.swift */,
-				F2649A7A1E55772300F98F4C /* ViewController.swift */,
 				F2649A7C1E55772300F98F4C /* Main.storyboard */,
 				F2649A7F1E55772300F98F4C /* Assets.xcassets */,
 				F2649A811E55772300F98F4C /* LaunchScreen.storyboard */,
 				F2649A841E55772300F98F4C /* Info.plist */,
+				F2649A8D1E5578A900F98F4C /* TaskTracker SQLite-Bridging-Header.h */,
 			);
 			path = "TaskTracker SQLite";
+			sourceTree = "<group>";
+		};
+		F2649A8A1E55779800F98F4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2649A8B1E55779800F98F4C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2649A911E5578DE00F98F4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2649A941E557D7000F98F4C /* Task.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2649A921E5578EC00F98F4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2649A931E5578F000F98F4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2649A7A1E55772300F98F4C /* ListVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +138,7 @@
 					F2649A741E55772300F98F4C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2BULHRS882;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,7 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2649A7B1E55772300F98F4C /* ViewController.swift in Sources */,
+				F2649A7B1E55772300F98F4C /* ListVC.swift in Sources */,
+				F2649A951E557D7000F98F4C /* Task.swift in Sources */,
 				F2649A791E55772300F98F4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,11 +304,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2BULHRS882;
 				INFOPLIST_FILE = "TaskTracker SQLite/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "serhii.pianykh.TaskTracker-SQLite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskTracker SQLite/TaskTracker SQLite-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2BULHRS882;
 				INFOPLIST_FILE = "TaskTracker SQLite/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "serhii.pianykh.TaskTracker-SQLite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskTracker SQLite/TaskTracker SQLite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
