@@ -10,9 +10,20 @@ import Foundation
 
 
 class Task {
+    private var _id: Int = 0
     private var _title: String
     private var _details: String?
     private var _done: Int
+    private var _creating: Int
+    
+    var id: Int {
+        get {
+            return _id
+        }
+        set {
+            _id = newValue
+        }
+    }
     
     var title: String {
         get {
@@ -42,17 +53,30 @@ class Task {
         }
     }
     
+    var creating: Int {
+        get {
+            return _creating
+        }
+        set {
+            _creating = newValue
+        }
+    }
+    
     init(title: String) {
         self._title = title
         self._done = 0
+        self._creating = 1
     }
     init(title: String, done: Int) {
         self._title = title
         self._done = done
+        self._creating = 0
     }
-    init(title:String, details: String, done: Int) {
+    init(id: Int,title:String, details: String, done: Int, creating: Int) {
+        self._id = id
         self._title = title
         self._details = details
         self._done = done
+        self._creating = creating
     }
 }
